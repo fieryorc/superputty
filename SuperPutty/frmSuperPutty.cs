@@ -254,6 +254,14 @@ namespace SuperPutty
             }
         }
 
+        private string Shorten(string str)
+        {
+            int MAX_LENGTH = 20;
+            if (str.Length > MAX_LENGTH)
+                return str.Substring(0, MAX_LENGTH - 3) + "...";
+            return str;
+        }
+
         public void SetPanelTitle(ctlPuttyPanel panel)
         {
             IntPtr handle = panel.GetChildHandle();
@@ -261,7 +269,8 @@ namespace SuperPutty
             StringBuilder stringBuilder = new StringBuilder(capacity);
             WinAPI.GetWindowText(new HandleRef(this, handle), stringBuilder, stringBuilder.Capacity);
 
-            panel.TabText = stringBuilder.ToString();
+            panel.TabText = Shorten(stringBuilder.ToString());
+
             this.Text = stringBuilder.ToString().Replace(" - PuTTY", "") + " - SuperPutty";
         }
 
