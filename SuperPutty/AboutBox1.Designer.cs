@@ -189,8 +189,8 @@
             this.textBox1.TabIndex = 24;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "SuperPutty is a tabbed interface for the PuTTY SSH Client. It is can be used for " +
-                "both terminal sessions and file transfers both utilizing the secure SSH protocol" +
-                ".";
+    "both terminal sessions and file transfers both utilizing the secure SSH protocol" +
+    ".";
             // 
             // tabPage2
             // 

@@ -523,6 +523,8 @@ namespace SuperPutty
             m_hotkeys.RegisterGlobalHotkey(Key.H, GlobalHotkeys.MOD_ALT, GlobalHotkeys.Purpose.ToggleMenu);
             m_hotkeys.RegisterGlobalHotkey(Key.Left, GlobalHotkeys.MOD_ALT, GlobalHotkeys.Purpose.Previous);
             m_hotkeys.RegisterGlobalHotkey(Key.Right, GlobalHotkeys.MOD_ALT, GlobalHotkeys.Purpose.Next);
+            m_hotkeys.RegisterGlobalHotkey(Key.Tab, GlobalHotkeys.MOD_CONTROL, GlobalHotkeys.Purpose.Next);
+            m_hotkeys.RegisterGlobalHotkey(Key.Tab, GlobalHotkeys.MOD_CONTROL | GlobalHotkeys.MOD_SHIFT, GlobalHotkeys.Purpose.Previous);
             m_hotkeys.RegisterGlobalHotkey(Key.D1, GlobalHotkeys.MOD_CONTROL, GlobalHotkeys.Purpose.Tab1);
             m_hotkeys.RegisterGlobalHotkey(Key.D2, GlobalHotkeys.MOD_CONTROL, GlobalHotkeys.Purpose.Tab2);
             m_hotkeys.RegisterGlobalHotkey(Key.D3, GlobalHotkeys.MOD_CONTROL, GlobalHotkeys.Purpose.Tab3);

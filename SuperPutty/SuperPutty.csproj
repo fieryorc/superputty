@@ -137,7 +137,6 @@
       <DependentUpon>frmTransferStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="Logger.cs" />
-    <Compile Include="nUnit\CLI.cs" />
     <Compile Include="RemoteFileListPanel.cs">
       <SubType>Form</SubType>
     </Compile>

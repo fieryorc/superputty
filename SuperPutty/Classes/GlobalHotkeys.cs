@@ -19,7 +19,7 @@ namespace SuperPutty.Classes
 
         public const int MOD_ALT = 1;
         public const int MOD_CONTROL = 2;
-        // public const int MOD_SHIFT = 4; // Not needed
+        public const int MOD_SHIFT = 4; // Not needed
         public const int MOD_WIN = 8;
 
         public const int WM_HOTKEY = 0x312;
@@ -32,6 +32,7 @@ namespace SuperPutty.Classes
 
         private bool altDown = false;
         private bool ctrlDown = false;
+        private bool shiftDown = false;
         private bool winDown = false;
 
         private short hotkeyCount = 0;
@@ -103,6 +104,11 @@ namespace SuperPutty.Classes
                 ctrlDown = value;
             }
 
+            if (key == Key.LeftShift || key == Key.RightShift)
+            {
+                shiftDown = value;
+            }
+
             if (key == Key.LWin || key == Key.RWin)
             {
                 winDown = value;
@@ -120,6 +126,11 @@ namespace SuperPutty.Classes
             if (ctrlDown)
             {
                 modifier |= MOD_CONTROL;
+            }
+
+            if (shiftDown)
+            {
+                modifier |= MOD_SHIFT;
             }
 
             if (winDown)
